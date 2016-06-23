@@ -1,0 +1,121 @@
+/**
+* Less-Mixins
+* 2016-06
+*/
+
+/**
+* Transition
+* @property all
+* @duration 200ms
+* @effect ease
+*/
+.transition(@property: all, @duration: 200ms, @effect: ease) {
+  -webkit-transition: @property @duration @effect;
+  -moz-transition: @property @duration @effect;
+  -ms-transition: @property @duration @effect;
+  -o-transition: @property @duration @effect;
+  transition: @property @duration @effect;
+}
+
+/**
+* Border Radius
+* @topLeft 5px
+* @topRight 5px
+* @bottomRight 5px
+* @bottomLeft 5px
+*/
+.borderRadius(@topLeft: 5px, @topRight: 5px, @bottomRight: 5px, @bottomLeft: 5px) {
+  -webkit-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+  border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+}
+
+/**
+* Box Shadow Outset
+* @hLength 2px
+* @vLength 1px
+* @blurRadius 1px
+* @spread 1px
+* @color #000000
+*/
+.boxShadowOutset(@hLength: 1px, @vLength: 1px, @blurRadius: 1px, @spread: 1px, @color: #000000) {
+  -webkit-box-shadow: @hLength @vLength @blurRadius @spread @color;
+  box-shadow: @hLength @vLength @blurRadius @spread @color;
+}
+
+/**
+* Text Shadow
+* @hLength 2px
+* @vLength 1px
+* @blurRadius 1px
+* @color #000000
+*/
+.textShadow(@hLength: 1px, @vLength: 1px, @blurRadius: 1px, @color: #000000) {
+  text-shadow: @hLength @vLength @blurRadius @color;
+}
+
+/**
+* Transform Scale
+* @index 1
+*/
+.transformScale(@index: 1) {
+  -moz-transform: scale(@index);
+  -webkit-transform: scale(@index);
+  -o-transform: scale(@index);
+  -ms-transform: scale(@index);
+  transform: scale(@index);
+}
+
+/**
+* Transform Rotate
+* @angle: 0deg
+*/
+.transformRotate(@angle 0deg) {
+  -moz-transform: rotate(@angle);
+  -webkit-transform: rotate(@angle);
+  -o-transform: rotate(@angle);
+  -ms-transform: rotate(@angle);
+  transform: rotate(@angle);
+}
+
+/**
+* Transform Scale
+* @x: 0px
+* @y: 0px
+*/
+.transformRotate(@x: 0px, @y: 0px) {
+  -moz-transform: translateX(@x) translateY(@y);
+  -webkit-transform: translateX(@x) translateY(@y);
+  -o-transform: translateX(@x) translateY(@y);
+  -ms-transform: translateX(@x) translateY(@y);
+  transform: translateX(@x) translateY(@y);
+}
+
+/**
+* Transform Skew
+* @x: 0px
+* @y: 0px
+*/
+.transformRotate(@x: 0deg, @y: 0deg) {
+  -moz-transform: skewX(@x) skewY(@y);
+  -webkit-transform: skewX(@x) skewY(@y);
+  -o-transform: skewX(@x) skewY(@y);
+  -ms-transform: skewX(@x) skewY(@y);
+  transform: skewX(@x) skewY(@y);
+}
+
+/**
+* Transform
+* @scale: 1
+* @rotate: 0deg
+* @translateX: 0px
+* @translateY: 0px
+* @skewX: 0deg
+* @skewY: 0deg
+*/
+.transform(@scale: 1, @rotate: 0deg, @translateX: 0px, @translateY: 0px, @skewX: 0deg, @skewY: 0deg) {
+  -moz-transform: scale(@scale) rotate(@rotate) translateX(@translateX) translateY(@translateY) skewX(@skewX) skewY(@skewY);
+-webkit-transform: scale(@scale) rotate(@rotate) translateX(@translateX) translateY(@translateY) skewX(@skewX) skewY(@skewY);
+-o-transform: scale(@scale) rotate(@rotate) translateX(@translateX) translateY(@translateY) skewX(@skewX) skewY(@skewY);
+-ms-transform: scale(@scale) rotate(@rotate) translateX(@translateX) translateY(@translateY) skewX(@skewX) skewY(@skewY);
+transform: scale(@scale) rotate(@rotate) translateX(@translateX) translateY(@translateY) skewX(@skewX) skewY(@skewY);
+}
